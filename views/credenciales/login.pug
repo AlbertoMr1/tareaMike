@@ -1,0 +1,39 @@
+extends ../layout/index
+block cuerpocontenido
+    div.p-6.max-w-lg.px-16.mx-auto.bg-white.rounded-xl.shadow-lg.flex.items-center.space-x-4
+        div
+            div.text-xl.font-medium.text-black Formulario #{pagina}
+            p.text-slate-500 Necesito tus datos
+                form(method="POST" action="/cred/registrar")
+                    div
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="nombre") Nombre:
+
+                        input#nombre.w-full.px-14.py-2.border.border-gray-400.round-md.placeholder-gray-
+                        400(placeholder="Tu nombre por favor" type="text" name="nombre")
+
+                    div
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="correo") Correo:
+
+                        input#correo.w-full.px-14.py-2.border.border-gray-400.round-md.placeholder-gray-
+                        400(placeholder="Tu correo por favor" type="text" name="correo")
+
+                    div
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="password") Password:
+
+                        input#password.w-full.px-24.py-2.border.border-gray-400.round-md.placeholder-gray-
+                        400(placeholder="Tu password por favor" type="password" name="password")
+
+                    div
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="rpassword") Repetir Password:
+
+                        input#rpassword.w-full.px-14.py-2.border.border-gray-400.round-md.placeholder-gray-
+                        400(placeholder="Repetir password por favor" type="password" name="rpassword")
+
+                    br
+                    input(class="w-full uppercase bg-indigo-300 hover:bg-indigo-200 px-2" type="submit" value="Crear
+                    registro")
+                    br
+                    br
+                    div.flex.items-center.justify-between
+                        a.text-gray-500(href="") Iniciar Sesión
+                        a.text-gray-500(href="") Olvide el Password
